@@ -1,0 +1,24 @@
+const asyncHandler = require('express-async-handler');
+
+const getTareas = asyncHandler(async (req, res) => {
+    res.status(200).json({"mensaje":"getTareas"})
+})
+
+const createTareas =asyncHandler(async (req, res) => {
+    // res.status(200).json({"mensaje":"createTareas"})
+})
+
+const updateTareas =asyncHandler(async (req, res) => {
+    res.status(200).json({"mensaje":"updateTareas"})
+})
+
+const deleteTareas =asyncHandler(async (req, res) => {
+    res.status(200).json({"mensaje":"deleteTareas"})
+})
+
+module.exports = {
+    getTareas, 
+    createTareas, 
+    updateTareas, 
+    deleteTareas
+}
