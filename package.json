@@ -1,10 +1,14 @@
 {
-  "name": "mi_proyecto",
+  "name": "nodeb",
   "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "server": "node backend/server.js",
-    "dev": "nodemon backend/server.js"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "colors": "^1.4.0",

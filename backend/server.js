@@ -1,16 +1,19 @@
-const express = require('express');
-const colors = require('colors');
-const dotenv = require('dotenv').config();
-const port = process.env.PORT || 5001;
-const connectDB = require('../config/db');
+const express = require('express')
+const colors = require('colors')
+const dotenv = require('dotenv').config()
+const port = process.env.PORT || 5001
+const connectDB = require('./config/db')
+const {errorHandler} = require('./middleware/errorMiddleware')
 
-const app = express();
+connectDB()
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+const app = express()
 
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
 
-app.use('/api/tareas', require('./routes/tareasRoutes'));
+app.use('/api/tareas', require('./routes/tareasRoutes'))
 
+app.use(errorHandler)
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, ()=> console.log(`Servidor Iniciado en el puerto ${port}`))
