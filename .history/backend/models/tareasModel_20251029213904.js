@@ -2,9 +2,9 @@ const mongoose = require('mongoose')
 
 const tareaSchema = mongoose.Schema({
     user: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId
         ref: 'User',
-        required: true
+        requi
     },
     texto: {
         type: String,
